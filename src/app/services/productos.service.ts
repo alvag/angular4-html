@@ -38,7 +38,7 @@ export class ProductosService {
     if (this.productos.length === 0) {
       this.cargarProductos().then(() => {
         this.filtrarProductos(termino);
-        console.log(termino);
+        // console.log(termino);
       });
     } else {
       this.filtrarProductos(termino);
@@ -53,7 +53,7 @@ export class ProductosService {
         this.productos_filtrados.push(prod);
       }
     });
-    console.log(this.productos_filtrados);
+    // console.log(this.productos_filtrados);
   }
 
 }

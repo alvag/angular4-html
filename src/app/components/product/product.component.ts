@@ -39,6 +39,7 @@ export class ProductComponent {
           });
 
         });
+        window.scrollTo(0, 0);
     });
   }
 
