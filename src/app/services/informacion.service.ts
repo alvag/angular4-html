@@ -23,7 +23,7 @@ export class InformacionService {
   public carga_sobre_nosotros() {
     this.http.get('https://angular-4-html.firebaseio.com/equipo.json')
       .subscribe(data => {
-        console.log(data.json());
+        // console.log(data.json());
         this.equipo = data.json();
       });
   }
