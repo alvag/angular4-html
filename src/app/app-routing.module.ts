@@ -1,6 +1,6 @@
-import { Routes, RouterModule } from '@angular/router';
-
+import { NgModule } from '@angular/core';
 import { AboutComponent, PortafolioComponent, ProductComponent, SearchComponent } from './components/index.paginas';
+import { RouterModule, Routes } from '@angular/router';
 
 const app_routes: Routes = [
     { path: 'home', component: PortafolioComponent },
@@ -10,4 +10,12 @@ const app_routes: Routes = [
     { path: '**', pathMatch: 'full', redirectTo: 'home' }
 ];
 
-export const app_rounting = RouterModule.forRoot(app_routes);
+@NgModule( {
+    imports: [
+        RouterModule.forRoot( app_routes )
+    ],
+    exports: [
+        RouterModule
+    ]
+} )
+export class AppRoutingModule {}
